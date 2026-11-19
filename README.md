@@ -1,0 +1,3 @@
+# Palm Fever Cover Studio
+
+Palm Fever is an offline, GTA-style multi-panel cover studio that turns a photo and a caption into Vice City cover art entirely in the browser — no server, no library, no network request. It tiles your photo into a canvas mosaic of 8 panels arranged in the classic box-art grid, pushes the whole composition through an ink-comic grade with posterized color and hard blacks, and lays bold gradient lettering with a heavy outline over the top. Pick one of three export sizes — 1080×1080 square, 1080×1350 portrait, or 1920×1080 wide — and save the finished cover as a PNG. Serve the `app/` folder with `node serve.ts` and open http://localhost:8080 to start making covers.

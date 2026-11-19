@@ -1,0 +1,112 @@
+/* Palm Fever cover studio — dark editor, neon accents. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 14px/1.45 system-ui, sans-serif;
+  background: #14101c;
+  color: #efe9f5;
+}
+.app {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  min-height: 100vh;
+  gap: 0;
+}
+.controls {
+  padding: 20px 22px 40px;
+  border-right: 1px solid #2c2340;
+  overflow-y: auto;
+}
+h1 {
+  font-size: 26px;
+  letter-spacing: 4px;
+  margin: 0 0 2px;
+  color: #ffd166;
+  text-shadow: 0 0 18px rgba(255, 86, 209, .55);
+}
+.tag { color: #a99cc4; margin: 0 0 18px; }
+label {
+  display: block;
+  margin: 12px 0 4px;
+  color: #cfc3e8;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+input[type=text] {
+  width: 100%;
+  padding: 9px 10px;
+  background: #1d1630;
+  border: 1px solid #3a2d5c;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 15px;
+}
+input[type=file] { width: 100%; margin-top: 4px; color: #cfc3e8; }
+.big input { padding: 8px; }
+.hint { color: #8a7fa6; font-size: 12px; margin: 4px 0 0; }
+.lbl {
+  color: #cfc3e8;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin: 18px 0 6px;
+}
+.panelgrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+.panelgrid button {
+  aspect-ratio: 3 / 4;
+  border: 1px solid #3a2d5c;
+  background: #1d1630 center/cover no-repeat;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.panelgrid button.sel { outline: 2px solid #ffd166; }
+.panelgrid button span {
+  position: absolute;
+  left: 3px; top: 2px;
+  font-size: 9px;
+  color: #ffd166;
+  text-shadow: 0 1px 2px #000;
+}
+.grades-row { display: flex; gap: 6px; }
+.grade, .size {
+  flex: 1;
+  padding: 8px 6px;
+  background: #1d1630;
+  border: 1px solid #3a2d5c;
+  color: #efe9f5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.grade.active, .size:hover {
+  border-color: #ffd166;
+  color: #ffd166;
+}
+.export { display: flex; gap: 6px; flex-wrap: wrap; }
+#status { color: #8affc1; min-height: 20px; margin-top: 14px; }
+.foot { color: #6d6288; font-size: 11px; margin-top: 18px; }
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(1200px 500px at 70% -10%, rgba(255, 86, 209, .12), transparent),
+    radial-gradient(900px 420px at 20% 110%, rgba(255, 209, 102, .10), transparent),
+    #100c18;
+}
+#cover {
+  width: min(78vh, 640px);
+  height: min(78vh, 640px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .55);
+  border-radius: 4px;
+}
